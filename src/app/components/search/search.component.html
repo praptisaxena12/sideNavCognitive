@@ -1,0 +1,15 @@
+<div  [className]="showResult ? 'main_change' : 'main'">
+      <!-- search box -->
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" ngxTypeahead
+          [taList]="myLocalList" placeholder="Search" [value]="searchKeyword"
+          (taSelected)="selectedKeyword($event)">
+        </div>
+</div>
+<div *ngIf="showResult">
+    <app-result-filter></app-result-filter>
+    <div class="container-fluid">
+        <app-search-result></app-search-result>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+#navbarSide {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 10;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 2px solid #ccc;
+    background-color: #d3e2f0;
+    z-index: 1;
+  }
+
+  
+.nav{
+    padding: 0;
+    transition: 2s ease-out;
+    display: none;
+  }
+  
+.change{
+    display: block;
+   }
+  
+  .navbar-side-header {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #3a3232;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .navbar-side-item {
+    padding: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .navbar-side-item a {
+    color: #2c2b2b;
+    text-decoration: none;
+  }
+  .navbar-side-item a:hover {
+    color: #866666;
+    text-decoration: none;
+  }
+  
+  .nav-list {
+    padding: 10px;
+  }
+  
