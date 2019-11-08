@@ -1,5 +1,4 @@
-import { Component, OnInit} from '@angular/core';
-import {ProfileComponent} from '../profile/profile.component'
+import { Component, OnInit,ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -11,12 +10,6 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {    
-  }
-  
-  flagFromNav:boolean;
-  toggleSideNav(){
-    this.flagFromNav = true;
-        document.getElementById("navbarSide").classList.toggle("change");
   }
   
 }

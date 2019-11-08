@@ -1,9 +1,15 @@
 nav {
-  border: black;
-  background-color: rgb(128, 173, 240);
+  border-bottom: 1px solid black;
+  background-color: white;
 }
 
 .navbar-brand{
-  color:white;
+  color:rgb(204, 0, 0);
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.headerFont{
+  font-weight: initial;
 }
 

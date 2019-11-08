@@ -11,7 +11,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
   }
-  @Input() flagFromNav: boolean;
    wasInside:boolean;
    @HostListener('click')
     clickInside() {
@@ -19,15 +18,16 @@ export class ProfileComponent implements OnInit {
        console.log("clickInside: "+this.wasInside );
    }
 
+   toggleSideNav(){
+        document.getElementById("navbarSide").classList.toggle("change");
+  }
+
    @HostListener('document:click', ['$event'])
    clickout(event) {
-     console.log(this.flagFromNav);
-     this.wasInside = this.flagFromNav;
-    // document.getElementById("navbarSide").classList.remove("change");
      if (!this.wasInside) {
         document.getElementById("navbarSide").classList.remove("change");
       }
-     this.flagFromNav = false;
+     this.wasInside = false;
    }
   
 }

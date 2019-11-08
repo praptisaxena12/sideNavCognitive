@@ -4,6 +4,8 @@ import {FormsModule } from '@angular/forms';
 import { NgxTypeaheadModule } from 'ngx-typeahead';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +37,8 @@ const routes: Routes = [
     FormsModule,
     NgxTypeaheadModule,
     NgxPaginationModule,
-    MatSidenavModule
+    MatSidenavModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
