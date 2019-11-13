@@ -5,6 +5,7 @@ import { NgxTypeaheadModule } from 'ngx-typeahead';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +39,8 @@ const routes: Routes = [
     NgxTypeaheadModule,
     NgxPaginationModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

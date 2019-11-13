@@ -55,7 +55,17 @@
 
   .profileButton {
     position: absolute;
-    top: 1.5%;
+    top: 2.5%;
     right: 2%;
+  }
+
+  .moreLess > a{
+    font-size: 12px;
+    color:rgb(0, 140, 255);
+  }
+
+  .moreLess > a:hover{
+    color:rgb(0, 140, 255);
+    text-decoration: underline;
   }
   

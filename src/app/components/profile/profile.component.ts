@@ -1,4 +1,7 @@
+import { Favrouite } from './../../models/favrouite';
+import { ProfileService } from './../../services/profile/profile.service';
 import { Component, OnInit, HostListener, Input} from '@angular/core';
+
 
 @Component({
   selector: 'app-profile',
@@ -7,11 +10,23 @@ import { Component, OnInit, HostListener, Input} from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  wasInside:boolean;
+  listLimit:Number;
+  favoritesItem:any;
+  
 
-  ngOnInit() {
+  constructor(private profileservice:ProfileService) {
+       
   }
-   wasInside:boolean;
+  
+  ngOnInit() {
+    this.profileservice.getFavrouite().subscribe((data: any[])=>{
+      console.log(data);
+      this.favoritesItem = data;
+      this.listLimit = 4;
+    })  
+  }
+  
    @HostListener('click')
     clickInside() {
        this.wasInside = true;
@@ -30,4 +45,11 @@ export class ProfileComponent implements OnInit {
      this.wasInside = false;
    }
   
+   showMoreData(){
+    this.listLimit = this.favoritesItem.length;
+   }
+
+   showLessData(){
+    this.listLimit = 4; 
+  }
 }

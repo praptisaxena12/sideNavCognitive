@@ -5,18 +5,29 @@
 </form>
 <!-- Side navigation list -->
 <ul class="nav" id="navbarSide">
-        <li class="navbar-side-header">
+        <li class="navbar-side-header subHeader">
           <span>Profile</span>
         </li>
-        <li class="navbar-side-header">
+        <li class="navbar-side-header subHeader">
                 <span>Favorites</span>
-            <ul class="nav-list">
-                <li class="navbar-side-item">
-                  <a href="#">Favorites 1</a>
+            <ul class="nav-list" >
+                <li class="navbar-side-item" *ngFor="let fav of favoritesItem| slice:0:listLimit; let i=index">
+                  <a href="#">{{fav.title}}</a>
                 </li>
-                <li class="navbar-side-item">
-                        <a href="#">Favorites 1</a>
-                </li>
+                <li class="navbar-side-item moreLess">
+                  <a href="#" *ngIf ="listLimit < favoritesItem.length" (click)="showMoreData()">
+                    More..
+                  </a>
+                  <a href="#" *ngIf ="listLimit > 4" (click)="showLessData()">
+                    ..Less
+                  </a>
+                </li> 
             </ul>
           </li>
-      </ul>
+          <li class="navbar-side-header subHeader">
+            <span>Recents</span>
+          </li>
+      <li class="navbar-side-header subHeader">
+        <span>Trendings</span>
+      </li>
+</ul>
